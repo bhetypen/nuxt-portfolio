@@ -131,7 +131,7 @@ export const projects: Project[] = [
         img: '/images/nocode-cover.png',
         url: 'https://nocodewebsitebuilder.bhetycodeport.tech/',
         description:
-            'Experimental static website builder with visual UI; runs fully in the browser.',
+            'Experimental static website builder with visual UI; runs fully in the browser. React.js + Redux for statement management',
         tech: ['React', 'IndexedDB', 'Tailwind', 'CSS'],
         images: ['/images/nocode-cover.png'],
     }
