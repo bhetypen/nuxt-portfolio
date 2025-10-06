@@ -101,7 +101,7 @@ export const projects: Project[] = [
     },
     {
         slug: 'html-css-showcase',
-        title: 'HTML & CSS Showcase (Coders Bay)',
+        title: 'Travel Website Frontend HTML, CSS design only',
         category: 'frontend',
         logo: '/logos/htmlcss.png',
         img: '/images/htmlcss-cover.png',
