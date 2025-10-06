@@ -95,7 +95,7 @@ export const projects: Project[] = [
         img: '/images/portfolio-cover.png',
         url: 'https://bhetypen.github.io/webportfolio',
         description:
-            'Personal portfolio with responsive landing page without framework.',
+            'Personal portfolio with responsive landing page without using any frontend framework',
         tech: ['JavaScript', 'HTML', 'CSS'],
         images: ['/images/portfolio-cover.png'],
     },
