@@ -68,7 +68,7 @@ export const projects: Project[] = [
         description:
             'Planned full-stack app with search, booking and payments.',
         long:
-            'Frontend: Vue.js (wireframes in Figma). Backend: Node.js + Express. Database: MongoDB. Deployment: AWS (planned).',
+            'Frontend: Vue.js (wireframes in Figma). Backend: Node.js + Express. Database: MongoDB. Deployment: Docker + Caddy VPS (planned)',
         tech: ['Vue', 'Node.js', 'Express', 'MongoDB', 'Figma', 'AWS (planned)'],
         repoPrivate: true,
         images: ['/images/airline-cover.png'],
@@ -83,7 +83,7 @@ export const projects: Project[] = [
         img: '/images/quiz-cover.png',
         url: 'https://quize.bhetycodes.com/',
         description:
-            'Learning app with interactive quiz logic and responsive UI.',
+            'A Quiz APP with interactive quiz logic and responsive UI using vanilla javascript, css and html',
         tech: ['JavaScript', 'HTML', 'CSS'],
         images: ['/images/quiz-cover.png'],
     },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
         img: '/images/portfolio-cover.png',
         url: 'https://bhetypen.github.io/webportfolio',
         description:
-            'Personal portfolio with responsive landing page.',
+            'Personal portfolio with responsive landing page without framework.',
         tech: ['JavaScript', 'HTML', 'CSS'],
         images: ['/images/portfolio-cover.png'],
     },
