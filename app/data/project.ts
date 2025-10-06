@@ -26,7 +26,7 @@ export const projects: Project[] = [
         description:
             'Full-stack platform for managing local markets, vendors, and stalls. Features drag-and-drop stall planning, event management, and secure organizer/vendor dashboards.',
         long:
-            'LocalMarktplatz is an interactive marketplace application for organizers and vendors. The frontend is built with React + Next.js (deployed on Vercel) with responsive layouts and drag-and-drop stall management. The backend runs on Node.js + Express with MongoDB (deployed via Hostinger & AWS Lambda). Key features include secure JWT authentication, role-based access (organizer/vendor/admin), billing & application management, real-time chat/notifications via Socket.io, and public landing pages for organizers. Additional highlights: Google Maps integration, Swagger API docs, integrated mailing service, and design prototyped in Figma. Repo is private (available on request).',
+            'LocalMarktplatz is an interactive marketplace application for organizers and vendors. The frontend is built with React + Konva.js and Next.js with responsive layouts and drag-and-drop stall management. The backend runs on Node.js + Postgre SQL. Key features include secure JWT authentication, role-based access (organizer/vendor/admin), billing & application management, real-time chat/notifications via Socket.io, and public landing pages for organizers. Additional highlights: Google Maps integration, integrated mailing service. Repo is private (available on request).',
         tech: [
             'React',
             'Next.js',
