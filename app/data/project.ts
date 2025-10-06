@@ -55,8 +55,8 @@ export const projects: Project[] = [
         description:
             'REST API for products, cart & checkout with authentication and roles.',
         long:
-            'Backend: Node.js, Express, MongoDB. Security: login, role management (admin/user), password workflow. Deployment: AWS Lambda + API Gateway. Docs: Postman.',
-        tech: ['Node.js', 'Express', 'MongoDB', 'AWS Lambda', 'API Gateway', 'Postman'],
+            'Frontend: Vue.js + Bootstrap. Backend: Node.js, Express, MongoDB. Security: login, role management (admin/user), password workflow. Deployment: AWS Lambda + API Gateway. Docs: Postman.',
+        tech: ['Node.js', 'Express', 'MongoDB', 'Vue.js','AWS Lambda', 'API Gateway', 'Postman'],
         images: ['/images/ecommercesite.png'],
     },
     {

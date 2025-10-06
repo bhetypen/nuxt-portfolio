@@ -43,7 +43,7 @@ jobs:
       - name: Publish to deploy branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: deploy
+          branch: deployed
           folder: .output/public
           clean: true
           single-commit: true
