@@ -1,23 +1,25 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from '@tailwindcss/vite'
+// nuxt.config.ts
+import { defineNuxtConfig } from 'nuxt/config'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  css: ['~/assets/css/tailwind.css'],
 
+  css: ['~/assets/css/tailwind.css'],
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
+  devtools: { enabled: true },
 
+  // SPA + static output
   ssr: false,
-  nitro: {
-    preset: 'static'
+  nitro: { preset: 'static' },
+
+  // important for Hostinger (serving at /)
+  app: {
+    baseURL: '/',        // if you’re NOT under a subfolder
   },
-
-
 
   modules: ['shadcn-nuxt', '@nuxtjs/google-fonts'],
 })

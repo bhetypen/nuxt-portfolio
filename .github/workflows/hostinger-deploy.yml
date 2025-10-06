@@ -1,18 +1,23 @@
-name: Build Nuxt and publish static site
+name: Build Nuxt & publish static to deploy
 
 on:
   push:
-    branches: [main, master]
+    branches: [ master ]     # change if your default branch is different
+  workflow_dispatch:        # allow manual runs
 
 permissions:
-  contents: write   # allow pushing to the repo with GITHUB_TOKEN
+  contents: write           # required to push to deploy branch
+
+concurrency:
+  group: nuxt-deploy
+  cancel-in-progress: true
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -23,19 +28,27 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install deps
+      - name: Install
         run: npm ci
 
-      - name: Build
+      - name: Build (Nuxt)
         run: npm run build
 
-      - name: Generate static site
-        run: npm run generate   # Nuxt 3 -> outputs to .output/public
+      - name: Generate static site (Nuxt)
+        run: npm run generate   # outputs to .output/public
 
-      # Publish only the generated files to the 'deploy' branch
+      - name: Add .nojekyll (harmless on Hostinger)
+        run: touch .output/public/.nojekyll
+
+      # Optional: add CNAME for a custom domain (set a repo secret CUSTOM_DOMAIN)
+      - name: Add CNAME
+        if: ${{ secrets.CUSTOM_DOMAIN != '' }}
+        run: echo "${{ secrets.CUSTOM_DOMAIN }}" > .output/public/CNAME
+
       - name: Publish to deploy branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: deploy
           folder: .output/public
           clean: true
+          single-commit: true

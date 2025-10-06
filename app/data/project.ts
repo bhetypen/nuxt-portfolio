@@ -40,12 +40,12 @@ export const projects: Project[] = [
         category: 'fullstack',
         logo: '/logos/ecommerce.png',
         img: '/images/ecommercesite.png',
+        url: 'http://zuitt-bootcamp-prod-561-9032-penetzdorfer.s3-website.us-east-1.amazonaws.com/',
         description:
             'REST API for products, cart & checkout with authentication and roles.',
         long:
             'Backend: Node.js, Express, MongoDB. Security: login, role management (admin/user), password workflow. Deployment: AWS Lambda + API Gateway. Docs: Postman.',
         tech: ['Node.js', 'Express', 'MongoDB', 'AWS Lambda', 'API Gateway', 'Postman'],
-        repoPrivate: true,
         images: ['/images/ecommercesite.png'],
     },
     {

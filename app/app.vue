@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Sidebar from '~/components/Sidebar.vue'
+import Sidebar from './components/Sidebar.vue'
 import FlashLightOverlay from "./components/FlashLightOverlay.vue";
 
 
