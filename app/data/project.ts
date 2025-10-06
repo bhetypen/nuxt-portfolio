@@ -17,17 +17,28 @@ export interface Project {
 
 export const projects: Project[] = [
     // ========= Fullstack =========
-    {
+    {{
         slug: 'localmarktplatz',
         title: 'LocalMarktplatz (ongoing)',
         category: 'fullstack',
         logo: '/logos/localmarkt.png',
         img: '/images/localmarkt-cover.png',
         description:
-            'Interactive full-stack marketplace for market stands & events. Drag & drop planning, Google Maps integration, export to HTML/JPEG, user auth with roles.',
+            'Full-stack platform for managing local markets, vendors, and stalls. Features drag-and-drop stall planning, event management, and secure organizer/vendor dashboards.',
         long:
-            'Frontend: React + Next.js (Vercel). Backend: Node.js, Express, MongoDB (Hostinger + AWS Lambda). Security: JWT auth, role management (user/admin), password management. Design in Figma.',
-        tech: ['React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'Google Maps', 'JWT', 'Figma'],
+            'LocalMarktplatz is an interactive marketplace application for organizers and vendors. The frontend is built with React + Next.js (deployed on Vercel) with responsive layouts and drag-and-drop stall management. The backend runs on Node.js + Express with MongoDB (deployed via Hostinger & AWS Lambda). Key features include secure JWT authentication, role-based access (organizer/vendor/admin), billing & application management, real-time chat/notifications via Socket.io, and public landing pages for organizers. Additional highlights: Google Maps integration, Swagger API docs, integrated mailing service, and design prototyped in Figma. Repo is private (available on request).',
+        tech: [
+            'React',
+            'Next.js',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'Google Maps',
+            'JWT',
+            'Figma',
+            'Socket.io',
+            'Swagger',
+        ],
         repoPrivate: true,
         images: [
             '/images/localmarkt-cover.png',
