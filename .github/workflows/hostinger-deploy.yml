@@ -40,11 +40,6 @@ jobs:
       - name: Add .nojekyll (harmless on Hostinger)
         run: touch .output/public/.nojekyll
 
-      # Optional: add CNAME for a custom domain (set a repo secret CUSTOM_DOMAIN)
-      - name: Add CNAME
-        if: ${{ secrets.CUSTOM_DOMAIN != '' }}
-        run: echo "${{ secrets.CUSTOM_DOMAIN }}" > .output/public/CNAME
-
       - name: Publish to deploy branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
