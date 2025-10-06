@@ -1,0 +1,41 @@
+name: Build Nuxt and publish static site
+
+on:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write   # allow pushing to the repo with GITHUB_TOKEN
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Generate static site
+        run: npm run generate   # Nuxt 3 -> outputs to .output/public
+
+      # Publish only the generated files to the 'deploy' branch
+      - name: Publish to deploy branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: deploy
+          folder: .output/public
+          clean: true
